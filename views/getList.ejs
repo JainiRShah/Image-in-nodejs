@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<style>
+    .card{
+        margin: 40px;
+        padding: 3% 5%;
+    }
+    .card-title{
+        text-align: center;
+    }
+  .table-responsive{
+      margin: 2% 0%;
+  }
+</style>
+<body>
+    <div class="main-wrapper">
+
+
+        <div class="page-wrapper">
+
+
+            <div class="page-content">
+
+                <div class="row">
+                    <div class="col-md-12 grid-margin stretch-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <a href="/addImage" style ="height: 30px;
+                                    width: 60px;
+                                    line-height: 30px;
+                                    margin:5px;"
+                                    class="btn btn-sm btn-primary">Add</a>
+                                <div class="table-responsive">
+                                    <table id="dataTableExample" class="table table-striped" style="font-size: 16px;">
+                                        <thead>
+                                            <tr>
+                                                <th>Id</th>
+                                                <th>Image Name</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <% i=1 %>
+                                        <% users.forEach(function(user){ %>
+                                        <tr>                                   
+                                            <td><%= user.id %></td>
+                                            <td><%= user.name %></td>                       
+                                            <td>
+                                                <a href="getImage?id=<%= user.id %>" style ="height: 30px;
+                                                    width: 60px;
+                                                    line-height: 30px;
+                                                    margin:5px;"
+                                                    class="btn btn-sm btn-primary">View</a>
+                                                
+                                            </td>
+                                        </tr>
+                                        <% i=i+1 %>
+                                        <% }); %> 
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+    </div>
+   
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container" style="margin: 5%;">
+    <form action="/addImage" method="post" enctype="multipart/form-data">
+
+        <div class="form-group">
+            <label for="exampleInputEmail1"> Upload Image</label>
+            <input type="file" class="form-control" name="image" placeholder="Select image">
+        </div>
+        <div class="box-footer">
+            <input class="btn btn-primary" type="submit" style="padding: 5px 10px;
+            font-size: 18px;" value="Submit">
+
+        </div>
+
+    </form>
+    </div>
+</body>
+
+</html>
